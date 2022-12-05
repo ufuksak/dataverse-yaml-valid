@@ -4,7 +4,7 @@
 version: '0.0.1'
 
 discoveryPort:
-  name: "aloooo"
+  name: "aloooo2222"
   description: string
   category:
     - string
