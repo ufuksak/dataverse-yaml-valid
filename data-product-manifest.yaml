@@ -4,7 +4,7 @@
 version: '0.0.1'
 
 discoveryPort:
-  name: "MusaTest12"
+  name: "MusaTest123"
   description: string
   category:
     - string
