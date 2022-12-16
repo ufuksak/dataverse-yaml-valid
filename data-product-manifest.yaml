@@ -1,8 +1,6 @@
 # --- Data product definition template and documentation   --- #
 
 # Data product manifest version. Prefer to have semantic version
-version: '0.0.1'
-
 manifest:
   discoveryPort:
     name: "Test Ufuk"
@@ -19,8 +17,6 @@ manifest:
       email: user@example.com
       userid: string
       url: https://sandbox.dataverse.xsight.me
-    createdDateTime: '2022-08-07T21:31:12.276Z'
-    updatedDateTime: '2022-08-07T21:31:12.276Z'
     tags:
       - string
     domainInfo:
@@ -87,5 +83,4 @@ gitRepoInfo:
   owner: string
   repo: string
   isAccessGrantedViaApp: true
-state: Draft
 # --- end -- #
