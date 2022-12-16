@@ -5,10 +5,10 @@ version: '0.0.1'
 
 manifest:
   discoveryPort:
-    name: "MusaTest09"
+    name: "Test Ufuk"
     description: string
     category:
-      - string
+      - "string"
     image: https://sandbox.dataverse.xsight.me
     createdBy:
       name: string
@@ -88,6 +88,5 @@ gitRepoInfo:
   owner: string
   repo: string
   isAccessGrantedViaApp: true
-  webhookId: 0
 state: Draft
 # --- end -- #
