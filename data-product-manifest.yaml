@@ -3,29 +3,30 @@
 # Data product manifest version. Prefer to have semantic version
 version: '0.0.1'
 
-discoveryPort:
-  name: "MusaTest09"
-  description: string
-  category:
-    - string
-  image: https://sandbox.dataverse.xsight.me
-  createdBy:
-    name: string
-    email: user@example.com
-    userid: string
-    url: https://sandbox.dataverse.xsight.me
-  owner:
-    name: string
-    email: user@example.com
-    userid: string
-    url: https://sandbox.dataverse.xsight.me
-  createdDateTime: '2022-08-07T21:31:12.276Z'
-  updatedDateTime: '2022-08-07T21:31:12.276Z'
-  tags:
-    - string
-  domainInfo:
-    - name: string
-      value: string
+manifest:
+  discoveryPort:
+    name: "MusaTest09"
+    description: string
+    category:
+      - string
+    image: https://sandbox.dataverse.xsight.me
+    createdBy:
+      name: string
+      email: user@example.com
+      userid: string
+      url: https://sandbox.dataverse.xsight.me
+    owner:
+      name: string
+      email: user@example.com
+      userid: string
+      url: https://sandbox.dataverse.xsight.me
+    createdDateTime: '2022-08-07T21:31:12.276Z'
+    updatedDateTime: '2022-08-07T21:31:12.276Z'
+    tags:
+      - string
+    domainInfo:
+      - name: string
+        value: string
   inputPorts:
     - alias:
         - string
