@@ -23,8 +23,7 @@ manifest:
       - name: string
         value: string
   inputPorts:
-    - alias:
-        - string
+    - alias: string
       description: string
       tags:
         - string
