@@ -117,21 +117,4 @@ transformation:
 
 # ---- Have to fill --- #
 
-# Define the busineess rules and quality controls, SLOs etc
-controlPort:
-  dataQualityRules:
-  businessMetrics:
-  #
-  slo:
-  tags: []
-  extra: {}
-
-# Control the way data is consumed from the data product.
-outputPort:
-  - alias: string
-    # the type/channel of the output port e.g. SQL, Rest, Cypher, Gremlin, GraphQL, CUBE-OLAP...
-    queryType: string
-    # slo is a set of metrcis and their corresponding expected/targeted value (e.g. responseTime < 1s )
-    tags: []
-    extra: {}
 # --- end -- #
