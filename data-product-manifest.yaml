@@ -3,7 +3,7 @@
 # Data product manifest version. Prefer to have semantic version
 manifest:
   discoveryPort:
-    name: "Test Ufuk"
+    name: "Test Ufuk2"
     description: string
     category: string
     image: https://sandbox.dataverse.xsight.me
