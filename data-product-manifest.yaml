@@ -85,6 +85,7 @@ stateManagement:
   # data update strategy (appendOnly, SCD, override, ...)
   updateStrategy: 'SCD-2'
   updateStrategyOptions:
+    entityRef: test
     # entityUrn:
     - # columns to use to create a unique key (e.g. hash of columns to be used in scd2 de-duplication)
       uniqueKeyColumns: ['customer_id']
