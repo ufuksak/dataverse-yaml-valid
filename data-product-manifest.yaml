@@ -120,5 +120,11 @@ transformation:
     from customers"
 
 # ---- Have to fill --- #
+controlPort:
+  dataQualityRules: ''
+  businessMetrics: ''
+  slo: ''
+  tags: []
+  extra: {}
 
 # --- end -- #
