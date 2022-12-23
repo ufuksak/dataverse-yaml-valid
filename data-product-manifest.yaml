@@ -4,7 +4,7 @@
 version: '0.0.1'
 
 discoveryPort:
-  name: 'CFR customer data Ufuk2'
+  name: 'CFR customer data Ufuk3'
   description: 'A daliy updated product about CRF customer data. It consist of more than 20M records integrated from 5 different sources'
   category: string
   autofillUserinfo: true
@@ -85,11 +85,11 @@ stateManagement:
   # data update strategy (appendOnly, SCD, override, ...)
   updateStrategy: 'SCD-2'
   updateStrategyOptions:
-    - entityRef: test
     # entityUrn:
     - # columns to use to create a unique key (e.g. hash of columns to be used in scd2 de-duplication)
       uniqueKeyColumns: ['customer_id']
       # Business columns for which to track changes (hash id column)
+      entityRef: test
       changeTrackColumns:
         [
           'cust_title_desc',
