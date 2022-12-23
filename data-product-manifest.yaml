@@ -122,7 +122,7 @@ transformation:
 # ---- Have to fill --- #
 controlPort:
   dataQualityRules: []
-  businessMetrics: []
+  businessMetrics: {}
   slo: {}
   tags: []
   extra: {}
