@@ -120,11 +120,4 @@ transformation:
     from customers"
 
 # ---- Have to fill --- #
-controlPort:
-  dataQualityRules:
-    - string
-  businessMetrics: {}
-  slo: {}
-  tags:
-    - string
  --- end -- #
