@@ -121,17 +121,10 @@ transformation:
 
 # ---- Have to fill --- #
 controlPort:
-  dataQualityRules: null
-  businessMetrics: null
-  slo: null
-  tags: []
-  extra: {}
-
-#controlPort:
-#  dataQualityRules:
-#    - string
-#  businessMetrics: {}
-#  slo: {}
-#  tags:
-#    - string
-# --- end -- #
+  dataQualityRules:
+    - string
+  businessMetrics: {}
+  slo: {}
+  tags:
+    - string
+ --- end -- #
