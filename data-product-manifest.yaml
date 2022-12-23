@@ -126,7 +126,7 @@ controlPort:
   slo: {}
   tags:
   - string
-outputPort:
+outPort:
   - alias: string
     queryType: string
     slo: {}
