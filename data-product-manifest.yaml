@@ -4,7 +4,7 @@
 version: '0.0.1'
 
 discoveryPort:
-  name: 'CFR customer data Carlos'
+  name: 'CFR customer data Ufuk3'
   description: 'A daliy updated product about CRF customer data. It consist of more than 20M records integrated from 5 different sources'
   category: string
   autofillUserinfo: true
@@ -84,11 +84,15 @@ stateManagement:
   retentionVersions: '10'
   # data update strategy (appendOnly, SCD, override, ...)
   updateStrategy: 'SCD-2'
+  productStoreState:
+    logicalSchemaUrn: '${urn:dv:schema:9d4716c3}'
+    retentionVersions: '10'
   updateStrategyOptions:
     # entityUrn:
     - # columns to use to create a unique key (e.g. hash of columns to be used in scd2 de-duplication)
       uniqueKeyColumns: ['customer_id']
       # Business columns for which to track changes (hash id column)
+      entityRef: test
       changeTrackColumns:
         [
           'cust_title_desc',
@@ -115,6 +119,19 @@ transformation:
     "select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd') as dateOfBirth, coalesce(cust_nationality,'') as nationality, coalesce(cust_mobile,'') as `phone:String`,coalesce(cust_landline,'') as `landline:String`,cust_status_desc as `status:String`,coalesce(cust_gender_desc,'') as `gender:String`,coalesce(cust_email,'') `email:String`,registration_channel as `acquisition_channel:String`, '{street:' || coalesce(cust_addrs1,'') || '^^' || coalesce(cust_addrs2,'') || '^^' || coalesce(cust_addrs3,'') || '^^' || coalesce(cust_addrs4,'') || '^^' || coalesce(cust_addrs5,'') || ',city:' || coalesce(cust_city,'') || ',po_box:' || coalesce(cust_po_box,'') || ', zipcode:' || coalesce(cust_zipcode,'') || ', country:' || coalesce(cust_country,'') ||  '}' `address:String`,coalesce(cust_first_name,'') || ' ' || coalesce(cust_last_name,'') as `customerName:String`,'' as `customerAge:String`,processing_time \
     from customers"
 
-# ---- Have to fill --- #
+controlPort:
+  dataQualityRules:
+    - string
+  businessMetrics: {}
+  slo: {}
+  tags:
+    - string
+
+outputPort:
+  - alias: string
+    queryType: string
+    slo: {}
+    tags:
+      - string
 
 # --- end -- #
