@@ -134,4 +134,52 @@ outputPort:
     tags:
     - string
 
+productResolutionInfo:
+  inputPorts:
+    sourceDetails:
+    - alias: mafh-analytics-data-ingestion
+      sourceUrn: urn:dv:datasource:crf-customers-6d4714c3
+      connectionProperties:
+        s3:
+          accessKeyId: "${env_datasource_crf-customers-6d4714c3_accessKeyId}"
+          secretAccessKey: "${env_datasource_crf-customers-6d4714c3_secretAccessKey}"
+  stateManagement:
+    logicalSchema:
+      logicalSchemaUrn: "${urn:dv:schema:9d4716c3}"
+      schemaDefinition:
+        properties:
+          customerAccountId:
+            type: string
+            description: ''
+            properties: {}
+            maxLength: 0
+          customer_id:
+            type: string
+            description: ''
+            properties: {}
+            maxLength: 60
+          title:
+            type: string
+            description: ''
+            properties: {}
+            maxLength: 40
+          dateOfBirth:
+            type: string
+            description: ''
+            properties: {}
+          nationality:
+            type: string
+            description: ''
+            properties: {}
+          phone:
+            type: string
+            description: ''
+            properties: {}
+        required:
+        - product_name
+        - product_key
+  transformation:
+    language: sql
+    env: spark
+    dependencyLibs: []
 # --- end -- #
