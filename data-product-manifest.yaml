@@ -143,7 +143,16 @@ productResolutionInfo:
         s3:
           accessKeyId: "${env_datasource_crf-customers-6d4714c3_accessKeyId}"
           secretAccessKey: "${env_datasource_crf-customers-6d4714c3_secretAccessKey}"
+          region: "eu-west-1"
   stateManagement:
+    sourceDetails:
+    - alias: mafh-analytics-data-ingestion
+      sourceUrn: urn:dv:datasource:crf-customers-6d4714c3
+      connectionProperties:
+        s3:
+          accessKeyId: "${env_datasource_crf-customers-6d4714c3_accessKeyId}"
+          secretAccessKey: "${env_datasource_crf-customers-6d4714c3_secretAccessKey}"
+          region: "eu-west-1"
     logicalSchema:
       logicalSchemaUrn: "${urn:dv:schema:9d4716c3}"
       schemaDefinition:
