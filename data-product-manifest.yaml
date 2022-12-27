@@ -5,13 +5,13 @@ discoveryPort:
   description: A daliy updated product about CRF customer data. It consist of more
     than 20M records integrated from 5 different sources
   category: customer
-  image: string
+  image: http://www.google.com
   autofillUserinfo: true
   tags: []
   extra: {}
 inputPorts:
 - alias: mafh-analytics-data-ingestion
-  description:
+  description: string
   tags: []
   extra: {}
   syncType: pull
@@ -109,14 +109,14 @@ transformation:
     `address:String`,coalesce(cust_first_name,'') || ' ' || coalesce(cust_last_name,'')
     as `customerName:String`,'' as `customerAge:String`,processing_time from customers
 controlPort:
-  dataQualityRules:
-  businessMetrics:
-  slo:
+  dataQualityRules: []
+  businessMetrics: {}
+  slo: {}
   tags: []
   extra: {}
 outputPort:
-- alias:
-  queryType:
+- alias: string
+  queryType: string
   slo: {}
   tags: []
   extra: {}
