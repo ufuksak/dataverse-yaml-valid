@@ -5,7 +5,7 @@ discoveryPort:
   description: A daliy updated product about CRF customer data. It consist of more
     than 20M records integrated from 5 different sources
   category: customer
-  image:
+  image: string
   autofillUserinfo: true
   tags: []
   extra: {}
