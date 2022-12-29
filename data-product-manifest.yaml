@@ -94,7 +94,7 @@ stateManagement:
     - cust_last_name
     - country_key
   productStoreState:
-    logicalSchemaUrn: "${urn:dv:schema:9d4716c3}"
+    logicalSchemaUrn: "${urn:dv:schema:49dc6a33-a0ae-44fe-93f8-32609b2d49ce}"
     retentionVersions: '10'
 transformation:
   sql: select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd')
@@ -141,7 +141,7 @@ productResolutionInfo:
           secretAccessKey: "${env_state_crf-customers-6d4714c3_secretAccessKey}"
           region: eu-west-1
     logicalSchema:
-      logicalSchemaUrn: "${urn:dv:schema:9d4716c3}"
+      logicalSchemaUrn: "${urn:dv:schema:49dc6a33-a0ae-44fe-93f8-32609b2d49ce}"
       schemaDefinition:
         properties:
           customerAccountId:
