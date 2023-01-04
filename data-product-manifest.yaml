@@ -18,7 +18,7 @@ inputPorts:
     extra: {}
     syncType: 'pull'
     type: 's3'
-    sourceUrn: 'urn:dv:datasource:crf-customers-6d4714c3'
+    sourceUrn: 'urn:dv:datasource:crf-customers-7a77cd00-08b9-41f1-9177-3eac02dba6bc'
     entityId:
       alias: 'customers'
       createEntity: true
