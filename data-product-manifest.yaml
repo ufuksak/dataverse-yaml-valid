@@ -85,7 +85,7 @@ stateManagement:
   # data update strategy (appendOnly, SCD, override, ...)
   updateStrategy: 'SCD-2'
   productStoreState:
-    logicalSchemaUrn: '${urn:dv:schema:9d4716c3}'
+    logicalSchemaUrn: '${urn:dv:schema:e1b6fd35-daad-4e44-ba0c-d81bf34a2bbc}'
     retentionVersions: '10'
   updateStrategyOptions:
     # entityUrn:
