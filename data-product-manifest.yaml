@@ -94,7 +94,7 @@ stateManagement:
     - cust_last_name
     - country_key
   productStoreState:
-    logicalSchemaUrn: "${urn:dv:schema:49dc6a33-a0ae-44fe-93f8-32609b2d49ce}"
+    logicalSchemaUrn: "${urn:dv:schema:ff24f24e-1496-41c5-b451-48d4fc3b7424}"
     retentionVersions: '10'
 transformation:
   sql: select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd')
