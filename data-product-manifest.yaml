@@ -135,8 +135,8 @@ productResolutionInfo:
           username: "${env_datasource_crf-customers-6d4714c3_accessKeyId}"
           password: "${env_datasource_crf-customers-6d4714c3_secretAccessKey}"
         kafka:
-          username: "${env_datasource_crf-customers-6d4714c3_accessKeyId}"
-          password: "${env_datasource_crf-customers-6d4714c3_secretAccessKey}"
+          username: "LI3NAWNIPDXBYB5B"
+          password: "vault:secret/data/kafka/#kafka_LI3NAWNIPDXBYB5B_pw"
   stateManagement:
     sourceDetails:
     - alias: mafh-analytics-data-state
