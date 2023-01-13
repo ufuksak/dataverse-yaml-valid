@@ -126,6 +126,9 @@ productResolutionInfo:
     sourceDetails:
     - alias: mafh-analytics-data-ingestion
       sourceUrn: urn:dv:datasource:crf-customers-2dd184a5-e7cc-462f-ade0-0590d32e1f7f
+      verticaVaultPath: `${vaultSecretPath}/executions/${executionid}/vertica`,
+      kafkaVaultPath: `${vaultSecretPath}/executions/${executionid}/kafka`,
+      categoryVaultPath: `${vaultSecretPath}/executions/${executionid}/category`,
       connectionProperties:
         s3:
           accessKeyId: "${env_datasource_crf-customers-6d4714c3_accessKeyId}"
