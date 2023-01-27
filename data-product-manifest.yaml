@@ -24,8 +24,8 @@ inputPorts:
     type: s3-bucket
     entityPath: s3a://mafh-analytics-data-ingestion/data-ingestion/prd/parsed/rtl_crf_dim_account/
     entityFilterPatternMatch: "*"
-    sourceSchemaUrn:
-    projectSchemaUrn:
+    sourceSchemaUrn: "urn:dv:schema:9d4716d6",
+    projectSchemaUrn: "urn:dv:schema:9d4716d4",
     fileFormat: csv
     delimiter: "|"
     filter: active_flag=1
