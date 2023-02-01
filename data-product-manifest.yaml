@@ -16,7 +16,7 @@ inputPorts:
   extra: {}
   syncType: pull
   type: s3
-  sourceUrn: urn:dv:datasource:818ed731-137f-47eb-9ae1-efe4b98576dc
+  sourceUrn: urn:dv:datasource:8f12c0ab-a47c-43ed-9ce4-bbdf813f4f53
   entityId:
     alias: customers
     createEntity: true
@@ -94,7 +94,7 @@ stateManagement:
     - cust_last_name
     - country_key
   productStoreState:
-    logicalSchemaUrn: "${urn:dv:schema:109004bb-0eb6-4674-aac9-3e604d718cd3}"
+    logicalSchemaUrn: "${urn:dv:schema:027abb6a-37ae-4a09-b005-ac98aca51b4e}"
     retentionVersions: '10'
 transformation:
   sql: select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd')
