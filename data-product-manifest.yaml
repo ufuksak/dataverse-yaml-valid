@@ -97,17 +97,7 @@ stateManagement:
     logicalSchemaUrn: "${urn:dv:schema:263deedb-916b-40f2-9740-6ee02ce9b8b9}"
     retentionVersions: '10'
 transformation:
-  sql: select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd')
-    as dateOfBirth, coalesce(cust_nationality,'') as nationality, coalesce(cust_mobile,'')
-    as `phone:String`,coalesce(cust_landline,'') as `landline:String`,cust_status_desc
-    as `status:String`,coalesce(cust_gender_desc,'') as `gender:String`,coalesce(cust_email,'')
-    `email:String`,registration_channel as `acquisition_channel:String`, '{street:'
-    || coalesce(cust_addrs1,'') || '^^' || coalesce(cust_addrs2,'') || '^^' || coalesce(cust_addrs3,'')
-    || '^^' || coalesce(cust_addrs4,'') || '^^' || coalesce(cust_addrs5,'') || ',city:'
-    || coalesce(cust_city,'') || ',po_box:' || coalesce(cust_po_box,'') || ', zipcode:'
-    || coalesce(cust_zipcode,'') || ', country:' || coalesce(cust_country,'') ||  '}'
-    `address:String`,coalesce(cust_first_name,'') || ' ' || coalesce(cust_last_name,'')
-    as `customerName:String`,'' as `customerAge:String`,processing_time from customers
+  sql: select * from customers
 controlPort:
   dataQualityRules: []
   businessMetrics: {}
