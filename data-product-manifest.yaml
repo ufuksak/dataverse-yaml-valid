@@ -115,9 +115,9 @@ controlPort:
   tags: []
   extra: {}
 outputPort:
-- alias: string
-  queryType: string
-  slo: {}
-  tags: []
-  extra: {}
+  channels:
+  - channelType: REST-API
+    queryType: SQL
+  - channelType: JDBC
+    queryType: SQL
 # --- end -- #
