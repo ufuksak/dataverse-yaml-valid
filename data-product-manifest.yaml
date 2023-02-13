@@ -95,7 +95,7 @@ stateManagement:
     - country_key
   productStoreState:
     logicalSchema:
-    - version: 1
+      version: 1
       structure:
         type: object
         properties:
