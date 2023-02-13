@@ -94,7 +94,28 @@ stateManagement:
     - cust_last_name
     - country_key
   productStoreState:
-    logicalSchemaUrn: "urn:dv:schema:5341c6b0-80ba-49c9-b69d-424e5c119201"
+    logicalSchema:
+    - version: 1
+      structure:
+        type: object
+        properties:
+          Name:
+            type: string
+            description: Name of the person
+          Gender:
+            type: string
+            enum:
+            - Male
+            - Female
+            - Unknown
+            description: Gender of the person. Possible values Male, Female and Unknown
+          Id:
+            type: number
+            description: Unique Identifier of the person
+        required:
+        - Name
+        - Id
+      isActive: true
     retentionVersions: '10'
 transformation:
   sql: select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd')
