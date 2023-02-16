@@ -70,7 +70,7 @@ inputPorts:
     - processing_time
     - file_name
 stateManagement:
-  refreshInterval: * * * * *
+  refreshInterval: 21 00 * * *
   updateStrategy: SCD
   updateStrategyOptions:
   - entityRef: "${urn:dv:datasource:6d4714c3}:1"
