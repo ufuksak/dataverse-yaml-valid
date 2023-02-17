@@ -1,67 +1,68 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Ufuk Car prices barcelona
-  description: Average car price in barcelona
-  category: customer
-  image: http://google.com  autofillUserinfo: true
-  tags: []
-  extra: {}
+  name: Car prices barcelona - c
+  description: Average car price in barcelona
+  category: customer
+  image: http://google.com
+  autofillUserinfo: true
+  tags: []
+  extra: {}
 inputPorts:
-  - alias: car_input_port
-    description: string
-    tags: []
-    extra: {}
-    syncType: pull
-    type: s3
-    sourceUrn: urn:dv:datasource:b82f74c0-5b8b-42c3-9038-6100d4519ff3
-    entityId:
-      alias: car_prices
-      createEntity: true
-      type: s3-bucket
-      entityPath: "s3a://dp-input-bucket/user_car_prices_barcelona_2022/"
-      entityFilterPatternMatch: "*"
-      sourceSchemaUrn: urn:dv:schema:9d4716d4
-      projectSchemaUrn: urn:dv:schema:9d4716d6
-      fileFormat: parquet
-      delimiter: ","
-      header: true
-      filter: brand = 'BMW'
-      processingTimeColumn:
-        - processing_time
-      actualTimeColumn:
-        - processing_time
-      projection:
-        - brand
-        - model
-        - engine
-        - year
-        - location
+  - alias: car_input_port
+    description: string
+    tags: []
+    extra: {}
+    syncType: pull
+    type: s3
+    sourceUrn: urn:dv:datasource:b82f74c0-5b8b-42c3-9038-6100d4519ff3
+    entityId:
+      alias: car_prices
+      createEntity: true
+      type: s3-bucket
+      entityPath: "s3a://dp-input-bucket/user_car_prices_barcelona_2022/"
+      entityFilterPatternMatch: "*"
+      sourceSchemaUrn: urn:dv:schema:9d4716d4
+      projectSchemaUrn: urn:dv:schema:9d4716d6
+      fileFormat: parquet
+      delimiter: ","
+      header: true
+      filter: brand = 'BMW'
+      processingTimeColumn:
+        - processing_time
+      actualTimeColumn:
+        - processing_time
+      projection:
+        - brand
+        - model
+        - engine
+        - year
+        - location
 stateManagement:
-  alias: car_prices_barcelona
-  refreshInterval: "*/2 * * * *"
-  updateStrategy: SCD2
-  productStoreState:
-    logicalSchema:
-      properties:
-        brand:
-          type: string
-        model:
-          type: string
-        engine:
-          type: string
-        year:
-          type: string
-        location:
-          type: string
-    retentionVersions: "10"
-  updateStrategyOptions:
-    - entityRef: ${urn:dv:datasource:6d4714c3}:1
-      uniqueKeyColumns:
-        - customer_id
-      changeTrackColumns:
-        - cust_title_desc
-        - cust_birthday
-        - cust_nationality
+  alias: car_prices_barcelona
+  refreshInterval: "*/2 * * * *"
+  updateStrategy: SCD2
+  productStoreState:
+    logicalSchema:
+      properties:
+        brand:
+          type: string
+        model:
+          type: string
+        engine:
+          type: string
+        year:
+          type: string
+        location:
+          type: string
+    retentionVersions: "10"
+  updateStrategyOptions:
+    - entityRef: ${urn:dv:datasource:6d4714c3}:1
+      uniqueKeyColumns:
+        - customer_id
+      changeTrackColumns:
+        - cust_title_desc
+        - cust_birthday
+        - cust_nationality
 transformation:
-  sql: select * from car_prices
+  sql: select * from car_prices
