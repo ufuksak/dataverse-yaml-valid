@@ -70,7 +70,7 @@ inputPorts:
     - processing_time
     - file_name
 stateManagement:
-  refreshInterval: 00 10 * * *
+  refreshInterval: "0 * * * *"
   updateStrategy: SCD
   updateStrategyOptions:
   - entityRef: "${urn:dv:datasource:6d4714c3}:1"
@@ -94,7 +94,40 @@ stateManagement:
     - cust_last_name
     - country_key
   productStoreState:
-    logicalSchemaUrn: "${urn:dv:schema:872a70fc-487e-48f0-a839-05ac85ca832f}"
+    logicalSchema:
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID of the property
+        title:
+          type: string
+          description: Title of the property
+        subtitle:
+          type: string
+          description: Neighbourhood of the property
+        sq_mt_built:
+          type: string
+          description: Total built up area in square meters
+        sq_mt_useful:
+          type: string
+          description: Total carpet area in square meters
+        rent_price:
+          type: string
+          description: Total rental in Euros
+        rent_price_by_area:
+          type: string
+          description: Rental per square meters in Euros
+        buy_price:
+          type: string
+          description: Last sold price of the property in Euros
+        buy_price_by_area:
+          type: string
+          description: Last sold price per square meter of the property in Euros
+      required:
+        - subtitle
+        - rent_price
+        - rent_price_by_area
     retentionVersions: '10'
 transformation:
   sql: select 'CRF' as source, customer_id, date_format(cust_birthday, 'yyyy-MM-dd')
