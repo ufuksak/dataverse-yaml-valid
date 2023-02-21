@@ -1,7 +1,7 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Car prices barcelona - 3 min - Wrong Query
+  name: Car prices barcelona - 4 min - Wrong Cron
   description: Average car price in barcelona
   category: customer
   image: http://google.com
@@ -40,7 +40,7 @@ inputPorts:
         - location
 stateManagement:
   alias: car_prices_barcelona
-  refreshInterval: "*/3 * * * *"
+  refreshInterval: "wrong exp"
   updateStrategy: SCD2
   productStoreState:
     logicalSchema:
@@ -65,4 +65,4 @@ stateManagement:
         - cust_birthday
         - cust_nationality
 transformation:
-  sql: select * from mar_prices
+  sql: select * from car_prices
