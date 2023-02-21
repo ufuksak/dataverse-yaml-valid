@@ -1,7 +1,7 @@
 ---
 version: 0.0.1
 discoveryPort:
-  name: Car prices barcelona - 3 min
+  name: Car prices barcelona - 3 min - Wrong Query
   description: Average car price in barcelona
   category: customer
   image: http://google.com
@@ -65,4 +65,4 @@ stateManagement:
         - cust_birthday
         - cust_nationality
 transformation:
-  sql: select * from car_prices
+  sql: select * from mar_prices
