@@ -21,7 +21,7 @@ inputPorts:
       createEntity: true
       type: s3-bucket
       entityPath: "s3a://dp-input-bucket/user_car_prices_barcelona_##my_dynamic_year##/"
-      entityVaribles:
+      entityVariables:
         - key: my_dynamic_year
           value: date-YYYYMMdd
       entityFilterPatternMatch: "*"
