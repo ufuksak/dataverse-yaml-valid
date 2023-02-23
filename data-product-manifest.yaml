@@ -24,7 +24,6 @@ inputPorts:
       entityVariables:
         - key: my_dynamic_year
           value: date-YYYYMMdd
-        productStoreState:
       tableSchema:
         properties:
           createdBy:
