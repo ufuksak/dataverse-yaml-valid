@@ -20,10 +20,12 @@ inputPorts:
       alias: car_prices
       createEntity: true
       type: s3-bucket
-      entityPath: "s3a://dp-input-bucket/user_car_prices_barcelona_##my_dynamic_year##/"
+      entityPath: "s3a://dp-input-bucket/user_car_prices_barcelona_##my_dynamic_year##/##my_extension##"
       entityVariables:
         - key: my_dynamic_year
           value: date-YYYYMMdd
+        - key: my_extension
+          value: "csv | xml | xslx | doc"
       tableSchema:
         properties:
           createdBy:
