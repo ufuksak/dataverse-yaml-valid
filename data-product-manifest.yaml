@@ -62,9 +62,9 @@ stateManagement:
   updateStrategyOptions:
     entityRef: ${urn:dv:datasource:6d4714c3}:1
     processingTimeColumn:
-      - 123456
+      - "123456"
     actualTimeColumn:
-      - 123456
+      - "123456"
     uniqueKeyColumns:
       - customer_id
     changeTrackColumns:
