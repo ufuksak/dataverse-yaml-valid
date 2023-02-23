@@ -24,6 +24,18 @@ inputPorts:
       entityVariables:
         - key: my_dynamic_year
           value: date-YYYYMMdd
+        productStoreState:
+      tableSchema:
+        properties:
+          createdBy:
+            type: string
+            format: date-dd/MM/YYYY
+          model:
+            type: string
+          engine:
+            type: string
+          year:
+            type: string
       entityFilterPatternMatch: "*"
       sourceSchemaUrn: urn:dv:schema:9d4716d4
       projectSchemaUrn: urn:dv:schema:9d4716d6
@@ -58,6 +70,7 @@ stateManagement:
           type: string
         location:
           type: string
+          format: date-dd/MM/YYYY
     retentionVersions: "10"
   updateStrategyOptions:
     - entityRef: ${urn:dv:datasource:6d4714c3}:1
