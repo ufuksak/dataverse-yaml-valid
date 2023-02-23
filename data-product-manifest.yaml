@@ -20,7 +20,10 @@ inputPorts:
       alias: car_prices
       createEntity: true
       type: s3-bucket
-      entityPath: "s3a://dp-input-bucket/user_car_prices_barcelona_2022/"
+      entityPath: "s3a://dp-input-bucket/user_car_prices_barcelona_##my_dynamic_year##/"
+      entityVariables:
+        - key: my_dynamic_year
+          value: date-YYYYMMdd
       entityFilterPatternMatch: "*"
       sourceSchemaUrn: urn:dv:schema:9d4716d4
       projectSchemaUrn: urn:dv:schema:9d4716d6
