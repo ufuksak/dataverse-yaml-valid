@@ -43,7 +43,7 @@ inputPorts:
         - location
 stateManagement:
   alias: car_prices_barcelona
-  refreshInterval: "10 10 * * *"
+  refreshInterval: "*/2 * * * *"
   updateStrategy: SCD2
   productStoreState:
     logicalSchema:
