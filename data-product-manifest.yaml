@@ -15,7 +15,7 @@ inputPorts:
     extra: {}
     syncType: pull
     type: s3
-    sourceUrn: urn:dv:datasource:31bf4106-7cb1-490d-97f4-a8ef16c6af0f
+    sourceUrn: urn:dv:datasource:e1243c6a-d19d-4c24-9756-e4e6821dc959
     entityId:
       alias: car_prices
       createEntity: true
